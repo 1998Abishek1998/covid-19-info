@@ -1,0 +1,44 @@
+:root {
+  --primary: rgb(97, 77, 77);
+  --secandary: mediumturquoise;
+  --ternary: mediumslateblue;
+  --hoverColor: mediumvioletred;
+}
+.infoBox {
+  width: 10rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+  background: white;
+  margin: 1rem;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.infoBox:hover {
+  box-shadow: 0 0 10px 1px rgba(199, 21, 133, 0.5);
+}
+.infoBox_title {
+  background: white;
+  color: var(--ternary);
+}
+.infoBox_total {
+  background: white;
+  color: var(--secandary);
+}
+.infoBox_cases {
+  background: white;
+  color: var(--primary);
+}
+@media (max-width: 620px) {
+  .infoBox_title {
+    font-size: 10px;
+  }
+  .infoBox_cases {
+    font-size: 20px;
+  }
+  .infoBox_total {
+    font-size: 10px;
+  }
+}
