@@ -72,6 +72,7 @@ function Home() {
 					caseTypes={caseTypes}
 					center={mapCenter}
 					zoom={mapZoom}
+					alt="maps"
 				/>
 				<LineGraph key={caseTypes} caseType={caseTypes} />
 			</div>
