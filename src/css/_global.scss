@@ -1,0 +1,29 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow-x: hidden;
+	background: $primary-1100;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.errorPage {
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	&__banner {
+		opacity: 0.5;
+		margin-top: 10%;
+		margin-left: 10%;
+	}
+}
+.activeItem {
+	box-shadow: 0 0 10px 1px rgba(199, 21, 133, 0.5);
+}
