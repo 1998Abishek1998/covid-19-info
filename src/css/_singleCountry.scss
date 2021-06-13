@@ -1,0 +1,84 @@
+/** @format */
+
+.singleCountry {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		max-width: 1170px;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem 2rem;
+		padding-top: 1rem;
+	}
+	&__map {
+		height: 470px;
+		background-color: $primary-1000;
+		padding: 1rem;
+		border-radius: 20px;
+		margin: 0 auto;
+		box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+		max-width: 500px;
+		width: 100%;
+		@include breakpoint-down(small) {
+			width: 270px;
+		}
+		@include breakpoint-down(medium) {
+			order: 1;
+		}
+	}
+	&__infoContainer {
+		width: 100%;
+		display: grid;
+		grid-template-rows: 1fr 0.5fr;
+		align-items: center;
+		justify-content: center;
+		@include breakpoint-down(medium) {
+			margin-top: 2rem;
+			order: -1;
+		}
+	}
+	&__info {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		@include breakpoint-down(medium) {
+			margin-left: 1rem;
+		}
+	}
+	&__name {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 2rem;
+		h2 {
+			color: $primary-300;
+		}
+		h4 {
+			color: cadetblue;
+		}
+	}
+	&__infoBox {
+		max-width: 900px;
+		margin: 0 auto;
+		display: grid;
+		align-items: center;
+		justify-content: space-evenly;
+		@include breakpoint-up(medium) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		}
+		@include breakpoint-up(large) {
+			margin-top: 2rem;
+		}
+		@include breakpoint-up(xlarge) {
+			margin-top: 6rem;
+		}
+	}
+}
+
+.singleCountry__map .leaflet-container {
+	height: 100%;
+}

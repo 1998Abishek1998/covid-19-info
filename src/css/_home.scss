@@ -1,0 +1,72 @@
+/** @format */
+
+.homepage {
+	&__design {
+		max-width: 1200px;
+		display: grid;
+		margin: 0 auto;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 1rem;
+		@include breakpoint-up(medium) {
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: $primary-1000;
+	}
+	&__dropdown {
+		color: white;
+		background-color: $primary-900;
+	}
+}
+.map {
+	height: 400px;
+	background-color: $primary-1000;
+	padding: 1rem;
+	border-radius: 20px;
+	margin: 0.5rem;
+	box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+	flex: 1;
+}
+.map .leaflet-container {
+	height: 100%;
+}
+.info {
+	&__container {
+		max-width: 300px;
+	}
+	&__flag {
+		height: 80px;
+		width: 100%;
+		background-size: cover;
+		border-radius: 8px;
+		img {
+			width: 100px;
+			border-radius: 5px;
+		}
+	}
+	&__name {
+		font-size: 20px;
+		font-weight: bold;
+		color: #555;
+	}
+	&__desc {
+		font-size: 16px;
+		margin-top: 5px;
+	}
+}
+.linegraph {
+	max-width: 600px;
+	min-width: 280px;
+	align-items: center;
+	h1 {
+		text-transform: capitalize;
+		color: #555;
+	}
+	&__actual {
+		width: 100%;
+		height: 300px;
+	}
+}
